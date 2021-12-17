@@ -56,7 +56,7 @@ Excessive HTTP Errors is implemented as follows:
 
  - Metric: Packetbeat: http.response.status_code > 400
  - Threshold: grouped http response status codes above 400 every 5 minutes
-    - When count() GROUPED OVER top5 ‘http.response.status_code’ is above 400 for the last 5 minutes
+    - When count() GROUPED OVER top 5 ‘http.response.status_code’ is above 400 for the last 5 minutes
  - Vulnerability Mitigated:
     - Used intrusion detection/prevention for attacks
     - IPS would block any suspicious IP’s
