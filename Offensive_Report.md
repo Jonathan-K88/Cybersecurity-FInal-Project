@@ -102,10 +102,11 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 <br>
 
    - Search MySQL database for Flag 3 and Wordpress user password hashes:
-    - Flag 3 found in wp_posts.
-    - Password hashes found in wp_users.
-    - Command: show databases;
-    - Command: use wordpress;
+
+   - Flag 3 found in wp_posts.
+   - Password hashes found in wp_users.
+   - Command: show databases;
+   - Command: use wordpress;
   
   
   ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/show%20db%20and%20Use%20wordpress.png)
@@ -148,10 +149,11 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 <br>
 
    - Secure a user shell as the user whose password you cracked.
-    - Command: ssh steven@192.168.1.110
-    - Password: pink84
-    - Escalating to root:
-    - Command: sudo -l  
+    
+   - Command: ssh steven@192.168.1.110
+   - Password: pink84
+   - Escalating to root:
+   - Command: sudo -l  
  
  
  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/sudo%20-l.png)
@@ -166,9 +168,10 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 <br>
 
    - Search for the root directory for Flag 4.
-    - Command: cd /root/
-    - Command: ls
-    - Command: cat flag4.txt
+   
+   - Command: cd /root/
+   - Command: ls
+   - Command: cat flag4.txt
 
 
 ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/cat%20flag4.txt%201.png)
