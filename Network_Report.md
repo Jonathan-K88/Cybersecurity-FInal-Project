@@ -34,6 +34,10 @@ You must inspect your traffic capture to answer the following questions:
 <br>
 
   4. Upload the file to VirusTotal.com. What kind of malware is this classified as?
+      
+  - Export File to VirusTotal.com:
+    - File --> Export Objects --> HTTP --> Filter: .dll --> Save june.dll --> Upload to VirusTotal.com
+      
 
 ![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/Wireshark%20Export.png)
 ![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/VirusTotal.png)
@@ -80,7 +84,8 @@ Inspect your traffic to answer the following questions:
 <br>
 
   3. What are the IP addresses used in the actual infection traffic?
-    
+  -Finding IP addresses:
+   - Statistics --> Conversation --> IPv4 --> Sort Packets tab high to low
    - The IP addresses used in the actual infection traffic are 172.16.4.205, 185.243.115.84, 166.62.11.64, and 23.43.62.169.
 
 ![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/Infected%20Traffic.png)
