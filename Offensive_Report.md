@@ -15,7 +15,6 @@ $ nmap 192.168.1.0/24
 ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/nmap%20cider%20scan.png)
 
 <br>
-<br>
 
 This scan identifies the services below as potential points of entry:
 - Target 1
@@ -37,13 +36,14 @@ The following vulnerabilities were identified on Target 1:
 
 ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/nmap%20-sV%20192.168.1.110.png)
 
+<br>
 
 ### Exploitation
 _TODO: Fill out the details below. Include screenshots where possible._
 
 The Red Team was able to penetrate `Target 1` and retrieve the following confidential data:
 - Target 1
-  - `flag1.txt`: _TODO: Insert `flag1.txt` hash value_
+  - `flag1.txt`: b9bbcb33e11b80be759c4e844862482d
    - **Exploit Used**
     - ssh into Michael's account and look through files in /var/www
     - Command: ssh michael@192.168.1.110
@@ -74,7 +74,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 <br>
 
 
-  - `flag3.txt`: 
+  - `flag3.txt`: afc01ab56b50591e7dccf93122770cd2
    - **Exploit Used**
     - Continued using michael shell to find the MySQL database password, logged into MySQL database, and found Flag 3 in wp_posts table.
     - Command: ls /var/www/html/wordpress/
@@ -84,7 +84,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
   
 <br>
 
-      - Command: cat /var/www/html/wordpress/wp-config.php
+   - Command: cat /var/www/html/wordpress/wp-config.php
   
   
   ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/DB%20Username%20%26%20Password.png)
@@ -133,7 +133,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
 
 <br>
-  - `flag4.txt`:
+  - `flag4.txt`: 715dea6c055b9fe3337544932f2941ce
    - **Exploit Used**
     - Used john to crack the password hash obtained from MySQL database, secured a new user shell as Steven, escalated to root.
     - Cracking the hashed password using john.
