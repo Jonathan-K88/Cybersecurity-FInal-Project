@@ -83,7 +83,7 @@ Inspect your traffic to answer the following questions:
     
    - The IP addresses used in the actual infection traffic are 172.16.4.205, 185.243.115.84, 166.62.11.64, and 23.43.62.169.
 
-![Screenshot]()
+![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/Infected%20Traffic.png)
 
 <br>
 
