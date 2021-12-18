@@ -83,14 +83,14 @@ Inspect your traffic to answer the following questions:
     
    - The IP addresses used in the actual infection traffic are 172.16.4.205, 185.243.115.84, 166.62.11.64, and 23.43.62.169.
 
-![Screenshot](Infected Traffic)
+![Screenshot]()
 
 <br>
 
   4. As a bonus, retrieve the desktop background of the Windows host.
 
 ![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/Windows%20Background%20Packets.png)
-![Screenshot](Desktop Background)
+![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/Windows%20Desktop.png)
 
 **Illegal Downloads**
 ---
@@ -123,4 +123,4 @@ Your task is to isolate torrent traffic and answer the following questions:
 
 ![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/Torrent%20Download%20Request.png)
 ![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/Torrent%20File.png)
-![Screenshot](Torrent File Picture)
+![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/Torrent%20Download.jpg)
