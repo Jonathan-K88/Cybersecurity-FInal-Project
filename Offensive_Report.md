@@ -24,12 +24,11 @@ This scan identifies the services below as potential points of entry:
   - Port 139/tcp open netbios-ssn (services) Samba smbd 3.X - 4.X
   - Port 445/tcp open netbios-ssn (services) Samba smbd 3.X - 4.X
 
-_TODO: Fill out the list below. Include severity, and CVE numbers, if possible._
 
 The following vulnerabilities were identified on Target 1:
 - Target 1
   - CVE-2021-28041 open SSH (Severity: High)
-  - CVE-2017-15710 Apache https 2.4.10 (Severity: High)
+  - CVE-2017-15710 Apache httpd 2.4.10 (Severity: High)
   - CVE-2017-8779 exploit on open rpcbind port could lead to remote DoS (Severity: High)
   - CVE-2017-7494 Samba NetBIOS (Severity: Critical)
 
@@ -39,7 +38,6 @@ The following vulnerabilities were identified on Target 1:
 <br>
 
 ### Exploitation
-_TODO: Fill out the details below. Include screenshots where possible._
 
 The Red Team was able to penetrate `Target 1` and retrieve the following confidential data:
 - Target 1
@@ -134,7 +132,6 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
   
   
   ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/SELECT%20*%20FROM%20wp_users.png)
-
 
 <br>
 
