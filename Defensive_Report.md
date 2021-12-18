@@ -64,9 +64,10 @@ Excessive HTTP Errors is implemented as follows:
    - Filter and disable or close port 22
   - Reliability: This alert will not generate an excessive amount of false positives identifying brute force attacks: Medium
 
-![Screenshot]()
-### ADD Screenshot for HTTP Errors
+![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/Excessive%20HTTP%20Errors.png)
 
+<br>
+<br>
 
 HTTP Request Size Monitor
 
@@ -78,7 +79,10 @@ HTTP Request Size Monitor is implemented as follows:
   - Vulnerability Mitigated: By controlling the number of http request sizes through a filter, protection is enabled to detect or prevent DDOS attacks for IPS/IDS.
   - Reliability: No, this alert doesn't generate an excessive amount of false positives because DDOS attacks submit requests within seconds, not within minutes: Medium
 
-### Add Screenshot for HTTP Request Size Monitor
+![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/HTTP%20Request%20Size%20Monitor.png)
+
+<br>
+<br>
 
 CPU Usage Monitor
 
@@ -90,8 +94,9 @@ CPU Usage Monitor is implemented as follows:
   - Vulnerability Mitigated: Controlling the CPU usage percentage at 50%, it will trigger a memory alert only if the CPU remains at or above 50% consistently for 5     minutes. Virus or Malware
   - Reliability: Yes, this alert can generate a lot of false positives due to CPU spikes occurring when specific integrations are initiated at the start of processin: High
 
-### ADD Screenshot for CPU 
+![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/CPU%20Usage%20Monitor.png)
 
+<br>
 
 ### Suggestions for Going Further (Optional)
 _TODO_: 
