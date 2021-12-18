@@ -127,5 +127,5 @@ Your task is to isolate torrent traffic and answer the following questions:
    - The user downloaded the torrent file: Betty_Boop_Rythm_on_the_Reservation.avi.torrent
 
 ![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/Torrent%20Download%20Request.png)
-![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/Torrent%20File.png)
+![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/Torrent%20File%20Object%20List.png)
 ![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/Torrent%20Download.jpg)
