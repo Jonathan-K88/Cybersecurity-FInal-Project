@@ -37,9 +37,48 @@ The following vulnerabilities were identified on Target 1:
 
 <br>
 
+### Critical Vulnerabilities:
+The following vulnerabilities were identified on Target 1:
+ 
+ - Network Mapping
+   - nmap scanned for open ports on a designated IP address
+   - Attacker can devise an attack based on open ports
+ 
+ - Unsalted Password Hash
+   - wpscan is used to gain username information 
+   - Attackers gain access the web server
+
+- Weak User Password
+  - A user account had a weak password, which was found via guessing
+  - Attacker is able to ssh into web server with weak username and password
+
+- Access MySQL Database
+  - Attackers discover a file containing MySQL database credentials
+  - Attacker can gain access to MySQL database with acquired credentials 
+
+- MySQL Password Extraction
+  - Password hashes for user accounts were found by browsing through MySQL tables
+  - Attacker can extract password hashes and crack them via john the ripper
+
+- Misconfigured User Privilege Escalation
+  - Steven’s account has sudo privileges for python
+  - Steven’s Python privileges used to escalate to root   
+ 
 ### Exploitation
 
 The Red Team was able to penetrate `Target 1` and retrieve the following confidential data:
+
+- Enumerated WordPress site Users with WPScan to obtain username michael, used SSH to get user shell
+  - Command used: wpscan --url http://192.168.1.110/wordpress -eu
+
+![Screenshot](wpscan screenshot)
+
+- Visited the IP address of the target: 192.168.1.110 over HTTP port 80
+
+![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/192.168.1.110%20browswer.png)
+
+<br>
+
 - Target 1
   - `flag1.txt`: b9bbcb33e11b80be759c4e844862482d
    - **Exploit Used**
@@ -91,10 +130,11 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 <br>
 
    - Used the credentials to log into MySQL and dump WordPress user password hashes.
-    - DB_NAME: wordpress
-    - DB_USER: root
-    - DB_PASSWORD: R@v3nSecurity
-    - Command: mysql -u root -p
+    
+     - DB_NAME: wordpress
+     - DB_USER: root
+     - DB_PASSWORD: R@v3nSecurity
+     - Command: mysql -u root -p
  
  
  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/mysql%20-u%20root%20-p%20command.png)
@@ -103,10 +143,10 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
    - Search MySQL database for Flag 3 and Wordpress user password hashes:
 
-   - Flag 3 found in wp_posts.
-   - Password hashes found in wp_users.
-   - Command: show databases;
-   - Command: use wordpress;
+     - Flag 3 found in wp_posts.
+     - Password hashes found in wp_users.
+     - Command: show databases;
+     - Command: use wordpress;
   
   
   ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/show%20db%20and%20Use%20wordpress.png)
@@ -129,7 +169,8 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 <br>
 
    - Screenshot of Wordpress user password hashes:
-    - Command: SELECT * FROM wp_users;
+    
+     - Command: SELECT * FROM wp_users;
   
   
   ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/SELECT%20*%20FROM%20wp_users.png)
@@ -150,10 +191,10 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
    - Secure a user shell as the user whose password you cracked.
     
-   - Command: ssh steven@192.168.1.110
-   - Password: pink84
-   - Escalating to root:
-   - Command: sudo -l  
+     - Command: ssh steven@192.168.1.110
+     - Password: pink84
+     - Escalating to root:
+     - Command: sudo -l  
  
  
  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/sudo%20-l.png)
@@ -169,9 +210,9 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
    - Search for the root directory for Flag 4.
    
-   - Command: cd /root/
-   - Command: ls
-   - Command: cat flag4.txt
+     - Command: cd /root/
+     - Command: ls
+     - Command: cat flag4.txt
 
 
 ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/cat%20flag4.txt%201.png)
