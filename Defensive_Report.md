@@ -4,10 +4,12 @@
 - Network Topology
 - Description of Targets
 - Monitoring the Targets
-- Patterns of Traffic & Behavior
-- Suggestions for Going Further
 
 ### Network Topology
+
+![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/Network%20Topology.png)
+
+<br>
 
 The following machines were identified on the network:
 - Hyper V Host Manager
