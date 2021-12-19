@@ -71,7 +71,10 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 - Enumerated WordPress site Users with WPScan to obtain username michael, used SSH to get user shell
   - Command used: wpscan --url http://192.168.1.110/wordpress -eu
 
-![Screenshot](wpscan screenshot)
+![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/wpscan%20-eu.png)
+![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/wpscan%20-eu%202.png)
+
+<br>
 
 - Visited the IP address of the target: 192.168.1.110 over HTTP port 80
 
