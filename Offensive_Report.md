@@ -109,7 +109,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
      - Command: cat /var/www/flag2.txt
   
   
-  ![ScreenShot](locate *flag*)
+  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/locate%20*flag*.png)
   ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/flag2.txt.png) 
 
 <br>
@@ -128,7 +128,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
    - Command: cat /var/www/html/wordpress/wp-config.php
   
   
-  ![ScreenShot](DB Username & Password)
+  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/DB%20Username%20%26%20Password.png)
 
 <br>
 
@@ -152,14 +152,14 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
      - Command: use wordpress;
   
   
-  ![ScreenShot](show DB and use wordpress)
+  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/show%20db%20and%20Use%20wordpress.png)
   
 <br>
 
    - Command: show tables;
   
   
-  ![ScreenShot](show tables;)
+  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/show%20tables%3B.png)
   
 <br>
 
@@ -167,7 +167,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
   
   
   ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/SELECT%20*%20FROM%20wp_posts%201.png)
-  ![ScreenShot](select * from wp_posts 2)
+  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/SELECT%20*%20FROM%20wp_posts%202.png)
 
 <br>
 
@@ -176,7 +176,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
      - Command: SELECT * FROM wp_users;
   
   
-  ![ScreenShot](select * from wp_users;)
+  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/SELECT%20*%20FROM%20wp_users.png)
 
 <br>
 
@@ -188,7 +188,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
      - Command: john --show wp_hashes.txt
 
 
-![ScreenShot](john command)
+![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/john%20command.png)
 
 <br>
 
@@ -219,5 +219,5 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
 
 ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/cat%20flag4.txt%201.png)
-![ScreenShot](cat flag4.txt 2)
+![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/cat%20flag4.txt%202.png)
 
