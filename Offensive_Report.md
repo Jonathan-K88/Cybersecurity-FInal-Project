@@ -96,7 +96,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
   
   ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/var:www%20and%20ls.png)
   ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/grep%20command%20flag%201.png)
-  ![ScreenShot](flag1)
+  ![ScreenShot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/flag1.png)
 
 <br>
 
