@@ -81,7 +81,7 @@ HTTP Request Size Monitor is implemented as follows:
   - Vulnerability Mitigated: By controlling the number of http request sizes through a filter, protection is enabled to detect or prevent DDOS attacks for IPS/IDS.
   - Reliability: No, this alert doesn't generate an excessive amount of false positives because DDOS attacks submit requests within seconds, not within minutes: Medium
 
-![Screenshot](HTTP Request Size Monitor)
+![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/HTTP%20Request%20Size%20Monitor.png)
 
 <br>
 <br>
