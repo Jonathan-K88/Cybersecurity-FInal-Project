@@ -81,7 +81,7 @@ HTTP Request Size Monitor is implemented as follows:
   - Vulnerability Mitigated: By controlling the number of http request sizes through a filter, protection is enabled to detect or prevent DDOS attacks for IPS/IDS.
   - Reliability: No, this alert doesn't generate an excessive amount of false positives because DDOS attacks submit requests within seconds, not within minutes: Medium
 
-![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/HTTP%20Request%20Size%20Monitor.png)
+![Screenshot](HTTP Request Size Monitor)
 
 <br>
 <br>
@@ -91,7 +91,7 @@ CPU Usage Monitor
 CPU Usage Monitor is implemented as follows:
 
   - Metric: Metricbeat: system.process.cpu.total.pct
-  - Threshold: The maximum cpu total percentage is over .5 in 5 minutes
+  - Threshold: The maximum cpu total percentage is over 0.5 in 5 minutes
    - WHEN max() OF system.process.cpu.total.pct OVER all documents IS ABOVE 0.5 FOR THE LAST 5 minutes
   - Vulnerability Mitigated: Controlling the CPU usage percentage at 50%, it will trigger a memory alert only if the CPU remains at or above 50% consistently for 5     minutes. Virus or Malware
   - Reliability: Yes, this alert can generate a lot of false positives due to CPU spikes occurring when specific integrations are initiated at the start of processin: High
