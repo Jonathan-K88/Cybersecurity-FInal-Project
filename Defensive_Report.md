@@ -7,7 +7,7 @@
 
 ### Network Topology
 
-![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/Network%20Topology.png)
+![Screenshot](https://github.com/Jonathan-K88/Cybersecurity-Final-Project/blob/main/Images/Network%20Topology.drawio.png)
 
 <br>
 
