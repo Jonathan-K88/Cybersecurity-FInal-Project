@@ -1,6 +1,6 @@
 # Cybersecurity-Final-Project
 
-For the Final Project. we filled out three report files and created a presentation focusing on the findings from one of the reports:
+For the Final Project, we filled out three report files and created a presentation focusing on the findings from one of the reports:
 
 #### Defensive_Report:
 [a ralative link](Defensive_Report.md)
